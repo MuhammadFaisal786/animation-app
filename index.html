@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation App</title>
+    <style>
+        body {
+            background-image: url("https://media.giphy.com/media/26gJztlzDSvW0wWLS/giphy.gif");
+            background-repeat: no-repeat;
+            background-size: 100%;
+        }
+
+        #plane {
+            height: 100px;
+            width: 100px;
+            top: 0%;
+            position: absolute;
+        }
+
+        #birds {
+            height: 100px;
+            width: 100px;
+            top: 0%;
+            left: 0%;
+        }
+    </style>
+</head>
+
+<body>
+    <img src="birds.gif" id="birds">
+    <script>
+        var elem = document.querySelector("#birds");
+        elem.animate([
+            { transform: 'translateX(1000px)' },
+            { transform: 'translateX(0px)' }
+        ], {
+            duration: 4000,
+            iterations: Infinity,
+
+        })
+        var elem = document.querySelector("#plane");
+        elem.animate([
+            { transform: 'translateX(-500px)' },
+            { transform: 'translateX(1000px)' }
+        ], {
+            duration: 10000,
+            iterations: Infinity,
+
+        })
+    </script>
+</body>
+
+</html>
